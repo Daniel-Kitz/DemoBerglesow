@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petker Malerbetrieb</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/d28569b80d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header id="mobile-navbar">
+      <img id="logo" src="img/logo.png" alt="Logo" />
+      <a href="javascript:void(0);" onclick="mobile_nav()">
+        <i id="hamburger" class="fa-solid fa-bars"></i>
+        <i id="cross" class="fa-solid fa-x"></i>
+      </a>
+    </header>
+    <div id="mobile-links-hintergrund">
+      <ul id="mobile-links">
+        <li><a href="#hero" onclick="mobile_nav()">Home</a></li>
+        <li><a href="#produkte" onclick="mobile_nav()">Produkte</a></li>
+        <li><a href="#lokal" onclick="mobile_nav()">Lokal</a></li>
+        <li><a href="#kontakt" onclick="mobile_nav()">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <header id="desktop-navbar">
+      <ul id="links-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#produkte">Produkte</a></li>
+      </ul>
+      <img id="logo" src="img/logo.png" alt="Logo" />
+      <ul id="links-rechts">
+        <li><a href="#lokal">Lokal</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </header>
+
+    <div id="hero">
+      <div id="hero-text">
+        <h1 class="titel">Ihr gesamter Malerbedarf,<br />An einem Ort.</h1>
+        <div id="hero-untertitel">
+          Egal ob Farbe, Lack oder Tapete. Wir haben ihren Farbton in bester
+          Qualität.
+        </div>
+      </div>
+      <button
+        class="button-white"
+        onclick="document.getElementById('produkte').scrollIntoView();"
+      >
+        Mehr Erfahren
+      </button>
+    </div>
+
+    <div id="produkte">
+      <h1 class="titel">Produkte</h1>
+      <div id="produkte-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum,
+        tellus at condimentum placerat, enim leo iaculis turpis, ut tempor ex
+        elit non leo. Nulla et rhoncus orci. Integer in posuere ipsum, ut
+        iaculis magna. Curabitur orci dui, dapibus eu varius eu, facilisis vitae
+        ante.
+      </div>
+      <div id="produkte-karten">
+        <div id="karten-gross">
+          <div class="karte-gross">
+            <h2>Farben</h2>
+            <div class="kreis-gross" id="kreis-farben">
+              <i class="fa-solid fa-palette"></i>
+            </div>
+            <span>
+              Mit über 300.000 Farbtönen haben wir für Sie sicherlich die
+              richtige Palette.<br />Wir bieten:
+            </span>
+            <ul>
+              <li>Farben</li>
+              <li>Lacke</li>
+              <li>Grundierungen</li>
+              <li>Putze</li>
+            </ul>
+            <span>
+              Entdecken Sie unsere Farbauswahl mit ihren vielen Facetten!
+            </span>
+          </div>
+          <div class="karte-gross">
+            <h2>Stoffe</h2>
+            <div class="kreis-gross" id="kreis-stoffe">
+              <i class="fa-solid fa-fill-drip"></i>
+            </div>
+            <span>
+              Qualität steht für uns an erster Stelle. Deshalb haben wir für Sie
+              eine große Auswahl an bestem Material:
+            </span>
+            <ul>
+              <li>Tapeten</li>
+              <li>Wandbeschichtungen</li>
+              <li>Spachteln</li>
+              <li>Klebstofe</li>
+            </ul>
+            <span>
+              Entdecken Sie unsere Sotffauswahl mit ihren vielen Facetten!
+            </span>
+          </div>
+          <div class="karte-gross">
+            <h2>Werkzeug</h2>
+            <div class="kreis-gross" id="kreis-werkzeug">
+              <i class="fa-solid fa-paint-roller"></i>
+            </div>
+            <span>
+              Das Werkzeug ist des Meisters Helfer. Auf unsere Werkzeuge können
+              Sie sich definitiv verlassen:
+            </span>
+            <ul>
+              <li>Malerwerkzeug</li>
+              <li>Abdeckfolien</li>
+              <li>Abdeckbänder</li>
+            </ul>
+            <span>
+              Entdecken Sie unsere Werkzeugauswahl mit ihren vielen Facetten!
+            </span>
+          </div>
+        </div>
+        <div id="karten-klein">
+          <div class="karte-klein">
+            <div class="kreis-klein" id="kreis-quali">
+              <i class="fa-solid fa-list-check"></i>
+            </div>
+            <div class="karte-klein-text">
+              <h2>Hohe Qualität</h2>
+              <span>
+                Unsere Produkte zeichnen sich durch viele Tests und hohe
+                Qualitätsstandards aus. Ihre Zufriedenheit ist bei uns
+                garantiert!
+              </span>
+            </div>
+          </div>
+          <div class="karte-klein">
+            <div class="kreis-klein" id="kreis-marken">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <div class="karte-klein-text">
+              <h2>Beste Marken</h2>
+              <span>
+                Bei uns erfahren Sie große Auswahl der besten Marken.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="lokal">
+      <!-- unsichtbares Element damit justify-content: space-around; funktioniert -->
+      <button class="button-white" style="visibility: hidden">Kontakt</button>
+      <div id="lokal-text">
+        <h1 class="titel">Lokal</h1>
+        <div id="lokal-untertitel">
+          Unser Shop - der Beste Ort der Welt. Sed eleifend eleifend vulputate.
+          Praesent porttitor risus in ipsum dapibus ultricies a et odio.
+          Praesent efficitur viverra interdum.
+        </div>
+      </div>
+      <button
+        class="button-white"
+        onclick="document.getElementById('kontakt').scrollIntoView();"
+      >
+        Kontakt
+      </button>
+    </div>
+
+    <div id="kontakt">
+      <h1 class="titel">Kontakt</h1>
+      <div id="kontakt-untertitel">
+        In magna arcu, volutpat ut finibus at, efficitur at justo. Praesent ac
+        feugiat augue, at interdum neque. Proin lobortis odio ut lectus
+        convallis, et pretium ligula vehicula.
+      </div>
+      <div id="kontakt-boxen">
+        <div id="kontaktformular">
+          <h2 id="kontaktformular-titel">Kontaktformular</h2>
+          <form action="contactform.php" method="post">
+            <input
+              type="text"
+              name="name"
+              id="kontaktformular-name"
+              class="kontaktformular-feld"
+              placeholder="Name"
+            />
+            <input
+              type="text"
+              name="email"
+              id="kontaktformular-email"
+              class="kontaktformular-feld"
+              placeholder="Email"
+            />
+            <input
+              type="text"
+              name="anliegen"
+              id="kontaktformular-anliegen"
+              class="kontaktformular-feld"
+              placeholder="Anliegen"
+            />
+            <textarea
+              name="nachricht"
+              id="kontaktformular-nachricht"
+              class="kontaktformular-feld"
+              placeholder="Ihre Nachricht bitte hierhin..."
+            ></textarea>
+            <input id="kontaktformular-senden" type="submit" value="Senden" />
+          </form>
+        </div>
+        <div id="daten">
+          <div id="anfahrt">
+            <h2>Anfahrt</h2>
+            Malerbedarf Petker GmbH<br />
+            An der Ziegelei 5<br />
+            53757 Sankt Augustin<br />
+            Deutschland
+          </div>
+          <div id="kontaktdaten">
+            <h2>Kontaktdaten</h2>
+            <i class="fa-solid fa-user"></i>&nbsp;&nbsp;Tim Berglesow<br />
+            <i class="fa-solid fa-phone"></i>&nbsp;&nbsp;02241 342039<br />
+            <i class="fa-solid fa-phone"></i>&nbsp;&nbsp;0160 99717059<br />
+            <i class="fa-solid fa-fax"></i>&nbsp;&nbsp;02241 9321875<br />
+            <i class="fa-solid fa-at"></i>&nbsp;&nbsp;info@malerbedarf-petker.de
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Copyright &copy; Malerbedarf Petker 2022 | <a href="#">Impressum</a> |
+      <a href="#hero">Back to Top</a>
+    </footer>
+
+    <script>
+      function mobile_nav() {
+        let x = document.getElementById("mobile-links");
+        let cross = document.getElementById("cross");
+        let ham = document.getElementById("hamburger");
+        if (x.style.display === "flex") {
+          x.style.display = "none";
+          cross.style.display = "none";
+          ham.style.display = "inline";
+        } else {
+          x.style.display = "flex";
+          cross.style.display = "inline";
+          ham.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

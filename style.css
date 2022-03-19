@@ -1,0 +1,583 @@
+/* import Poppins Regular and Open Sans Light+Regular */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Poppins&display=swap");
+
+html {
+  font-size: 62.5%;
+  /*
+  das ist um das Arbeiten mit (r)em einfacher zu machen
+  mit einer default font-size von 16px setzt das sie auf 10px
+  und macht das nutzen von (r)em einfacher
+  Vielfache von 10px!
+  also 2.2rem = 22px
+  */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2.2rem;
+  color: black;
+  /* font-family: "Open Sans", sans-serif;
+  font-weight: 300; */
+  /* line-height: 30px; ?? ist in XD drinne, aber??*/
+  display: flex;
+  flex-direction: column;
+}
+
+#produkte,
+#lokal,
+#kontakt {
+  padding: 0 5rem;
+}
+
+@media only screen and (min-width: 670px) {
+  #produkte,
+  #lokal,
+  #kontakt {
+    padding: 0 10rem;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  #produkte,
+  #lokal,
+  #kontakt {
+    padding: 0 30rem;
+  }
+}
+
+/* Mobile zentrieren */
+@media only screen and (max-width: 930px) {
+  #produkte .titel,
+  #produkte-text,
+  #kontakt .titel,
+  #kontakt-untertitel,
+  #kontaktformular {
+    align-items: center;
+    text-align: center;
+    min-width: none;
+  }
+  /* #kontakt-boxen {
+    justify-content: center;
+  } */
+}
+
+/*
+==========
+  NAVBAR
+==========
+*/
+
+header#mobile-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0 0.5rem 2rem;
+}
+
+header#mobile-navbar img {
+  max-height: 4rem;
+}
+
+header#mobile-navbar a {
+  padding: 1rem 2rem;
+  color: #707070;
+  text-decoration: none;
+}
+
+#mobile-links {
+  list-style: none;
+  display: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 1rem 2rem;
+  font-weight: 400;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+#mobile-links a {
+  color: #707070;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+#cross {
+  display: none;
+}
+
+header#desktop-navbar {
+  display: none;
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 768px) {
+  header#mobile-navbar {
+    display: none;
+  }
+  header#desktop-navbar {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    max-height: 8rem;
+    font-weight: 400;
+    font-size: 2rem;
+    text-transform: uppercase;
+    align-items: center;
+    gap: 6rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2rem 0;
+    z-index: 20;
+    box-shadow: 0px 0px 12px #00000029;
+  }
+
+  header#desktop-navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 3rem;
+  }
+
+  header#desktop-navbar ul a {
+    color: black;
+    text-decoration: none;
+    padding: 2rem;
+  }
+
+  header#desktop-navbar #logo {
+    max-height: 4rem;
+    margin-bottom: 1.1rem;
+    /* offset damit das Logo mit den Links in navbar zentriert ist (wegen Pinsel) */
+  }
+}
+
+/*
+========
+  HERO
+========
+*/
+
+#hero {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3.8rem;
+  background-image: url(img/hero.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)),
+    url(img/hero.png);
+  min-height: 68.6rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero-text {
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#hero-text h1 {
+  font-size: 5rem;
+  margin: 0;
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 768px) {
+  #hero-text {
+    font-size: 2.8rem;
+  }
+  #hero-text h1 {
+    font-size: 7.4rem;
+  }
+}
+
+/*
+============
+  PRODUKTE
+============
+*/
+
+#produkte {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8rem;
+}
+
+#produkte-karten {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+
+#karten-gross {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rem;
+  justify-content: center;
+  row-gap: 3rem;
+}
+
+.karte-gross {
+  /* height: 61.4rem; */
+  box-sizing: border-box;
+  width: 36rem;
+  padding: 3rem 3rem 5rem;
+  box-shadow: 0px 5px 12px #00000029;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+#produkte #produkte-karten h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 3.8rem;
+  margin: 0 0 1rem;
+}
+
+.kreis-gross {
+  height: 19rem;
+  width: 19rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 19rem;
+  font-size: 8rem;
+  flex-shrink: 0;
+}
+
+#kreis-farben {
+  background-color: #ffd1a8;
+}
+
+#kreis-stoffe {
+  background-color: #ffffa8;
+}
+
+#kreis-werkzeug {
+  background-color: #aeffa8;
+}
+
+#kreis-quali {
+  background-color: #ffa8e5;
+}
+
+#kreis-marken {
+  background-color: #a8edff;
+}
+
+.karte-gross span {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.karte-gross ul {
+  margin: 0;
+  padding: 0 0 0 3rem;
+  /* damit es links und nicht zentriert ist */
+  align-self: flex-start;
+}
+
+.karte-gross li {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+#karten-klein {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.karte-klein {
+  box-sizing: border-box;
+  width: 62.1rem;
+  max-width: 62.1rem;
+  padding: 3rem 3rem 5rem;
+  box-shadow: 0px 5px 12px #00000029;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  flex: 1 1 0%;
+  gap: 2.8rem;
+  justify-content: space-evenly;
+}
+
+.kreis-klein {
+  height: 14rem;
+  width: 14rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 14rem;
+  font-size: 6rem;
+  flex-shrink: 0;
+}
+
+.karte-klein-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+#produkte #produkte-karten #karten-klein .karte-klein .karte-klein-text h2 {
+  margin: 0;
+  display: block;
+}
+
+.karte-klein span {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-align: left;
+  display: block;
+}
+
+@media only screen and (max-width: 630px) {
+  .karte-klein {
+    flex-direction: column;
+    /* width: 90%; */
+    align-items: center;
+  }
+  .karte-klein h2 {
+    text-align: center;
+  }
+  .karte-klein span {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .karte-gross {
+    transition: all ease-in-out 0.1s;
+  }
+  .karte-gross:hover {
+    transform: translateY(-20px);
+  }
+  .karte-klein {
+    transition: all ease-in-out 0.1s;
+  }
+  .karte-klein:hover {
+    transform: translateY(-20px);
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+
+  .karte-gross span {
+    min-height: 70px;
+  }
+  
+  .karte-gross ul {
+    min-height: 120px;
+  }
+
+}
+
+/*
+=========
+  LOKAL
+=========
+*/
+
+#lokal {
+  display: flex;
+  flex-direction: column;
+  background-image: url(img/lokal.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52)),
+    url(img/lokal.png);
+  height: 50.08rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#lokal-text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#lokal-text h1 {
+  margin: 0;
+}
+
+#lokal-untertitel {
+  text-align: center;
+}
+
+/*
+===========
+  KONTAKT
+===========
+*/
+
+#kontakt {
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  padding-bottom: 20rem;
+}
+
+#kontakt h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 3.6rem;
+  margin-bottom: 1rem;
+}
+
+#kontakt-boxen {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#kontakt form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.kontaktformular-feld {
+  border-radius: 0.5rem;
+  border: 0;
+  box-shadow: 0 0.5rem 1.2rem #00000029;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2.1rem;
+  padding: 1rem 2rem;
+  width: 90%;
+  /* width: 59rem; */
+}
+
+#kontaktformular {
+  min-width: 50%;
+}
+
+#kontaktformular-nachricht {
+  height: 33rem;
+}
+
+#kontaktformular-senden {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: white;
+  border-radius: 0.5rem;
+  border: 0;
+  background-color: #0000007a;
+  padding: 1.1rem 4rem;
+  width: 14rem;
+}
+
+#kontaktformular-senden:hover {
+  background-color: #0000107a;
+  cursor: pointer;
+}
+
+#daten {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 2.1rem;
+  gap: 2rem;
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 768px) {
+  #kontakt-boxen {
+    flex-direction: row;
+    gap: 10rem;
+  }
+
+  .kontaktformular-feld {
+    width: 100%;
+  }
+
+  #daten {
+    gap: 5rem;
+  }
+}
+
+/*
+==========
+  FOOTER
+==========
+*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #707070;
+  color: white;
+  font-weight: 400;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+/* größere Handys */
+@media only screen and (min-width: 450px) {
+  footer {
+    font-size: 1.4rem;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 768px) {
+  footer {
+    font-size: 2.2rem;
+  }
+}
+
+/*
+=============
+  SONSTIGES
+=============
+*/
+
+.titel {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 5.7rem;
+  margin-bottom: 1rem;
+}
+
+.button-white {
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2rem; /* 20px */
+  border: none;
+  border-radius: 0.5rem; /* 5px */
+  padding: 1.8rem 0; /* 18px */
+  width: 20rem;
+}
+
+.button-white:hover {
+  background-color: #e8f0f1;
+  cursor: pointer;
+}
